@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap Task4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            height: 100%;
+            background-color: #fcfcfc;
+        }
+
+        .container {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 450px;
+            height: 87%;
+            background-color: #ccc;
+            border-radius: 15px;
+        }
+
+        .input-group {
+            margin-top: 8px;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container" style="background-color: rgb(184, 183, 181);">
+            <form name="f" action="#">
+                <div style="height: 10px;">
+                    <div class="input-group">
+                        <span><b>First Name</b></span><span class="input-group-text" id="fname1"
+                            style="height: 35px; margin-left: 40px;"><img src="../images/icons8-user-24.png"
+                                alt=""></span>
+                        <input type="text" id="fname" placeholder="First Name">
+                        <p id="a1"></p>
+                    </div>
+                    <div class="input-group">
+                        <span><b>Last Name</b></span><span class="input-group-text" id="lname1"
+                            style="height: 35px; margin-left: 40px;"><img src="../images/icons8-user-24.png"
+                                alt=""></span>
+                        <input type="text" id="lname" placeholder="Last Name">
+                        <p id="a2"></p>
+                    </div>
+                    <div class="input-group">
+                        <span><b>E-Mail</b></span><span class="input-group-text" id="mail1"
+                            style="height: 35px; margin-left: 72px;"><img src="../images/icons8-envelope-24.png"
+                                alt=""></span>
+                        <input type="email" id="mail" placeholder="E-Mail Address">
+                        <p id="a3"></p>
+                    </div>
+                    <div class="input-group">
+                        <span><b>Phone #</b></span><span class="input-group-text" id="phone1"
+                            style="height: 35px; margin-left: 60px;"><img src="../images/icons8-phone-24.png"
+                                alt=""></span>
+                        <input type="number" id="phone" placeholder="(845)555-1212">
+                        <p id="a4"></p>
+                    </div>
+                    <div class="input-group">
+                        <span><b>Address</b></span><span class="input-group-text" id="address1"
+                            style="height: 35px; margin-left: 60px;"><img src="../images/icons8-home-24.png"
+                                alt=""></span>
+                        <input type="text" id="address" placeholder="Address">
+                        <p id="a5"></p>
+                    </div>
+                    <div class="input-group">
+                        <span><b>City</b></span><span class="input-group-text" id="city1"
+                            style="height: 35px; margin-left: 90px;"><img src="../images/icons8-home-24.png"
+                                alt=""></span>
+                        <input type="text" id="city" placeholder="City">
+                        <p id="a6"></p>
+                    </div>
+                    <div class="input-group">
+                        <span><b>State</b></span><span class="input-group-text"
+                            style="height: 35px; margin-left: 80px;"><img src="../images/icons8-questionnaire-24.png"
+                                alt=""></span>
+                        <select name="state" id="state">
+                            <option value="">Please select your state</option>
+                            <option value="">Punjab</option>
+                            <option value="">Delhi</option>
+                            <option value="">Tamil Nadu</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <span><b>Do you have hosting?</b></span>
+                        <span style="margin-left: 3%;">
+                            <input type="radio" id="yes" name="hosting" value="Yes"><label for="yes">Yes</label><br>
+                            <input type="radio" id="no" name="hosting" value="No"><label for="no">No</label>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <span><b>Project Description</b></span><span class="input-group-text"
+                            style="height: 81px; margin-left: 5%;"><img src="../images/icons8-pencil-24.png"
+                                alt=""></span>
+                        <textarea name="pro" id="desc" cols="24" rows="2" placeholder="Project Description"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <button class="btn btn-warning"
+                            onclick="f_alert();l_alert();m_alert();p_alert();a_alert();c_alert();"><span
+                                class="bg-warning">Send <img src="../images/icons8-telegram-24.png"
+                                    alt=""></span></button>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function f_alert() {
+            var a = document.forms["f"]["fname"].value;
+            if (a == "") {
+                document.getElementById("fname").style.borderColor = "red";
+                document.getElementById("fname1").style.borderColor = "red";
+                document.getElementById("a1").innerHTML = "<p style='color: red;'>Please Supply your First name</p>"
+                return false;
+            } else {
+                document.getElementById("fname").style.borderColor = "";
+                document.getElementById("fname1").style.borderColor = "";
+                document.getElementById("a1").innerHTML = "";
+                return true;
+            }
+        }
+        function l_alert() {
+            var a = document.forms["f"]["lname"].value;
+            if (a == "") {
+                document.getElementById("lname").style.borderColor = "red";
+                document.getElementById("lname1").style.borderColor = "red";
+                document.getElementById("a2").innerHTML = "<p style='color: red;'>Please Supply your Last name</p>"
+                return false;
+            } else {
+                document.getElementById("lname").style.borderColor = "";
+                document.getElementById("lname1").style.borderColor = "";
+                document.getElementById("a2").innerHTML = "";
+                return true;
+            }
+        }
+        function m_alert() {
+            var a = document.forms["f"]["mail"].value;
+            if (a == "") {
+                document.getElementById("mail").style.borderColor = "red";
+                document.getElementById("mail1").style.borderColor = "red";
+                document.getElementById("a3").innerHTML = "<p style='color: red;'>Please Supply your email address</p>"
+                return false;
+            } else {
+                document.getElementById("mail").style.borderColor = "";
+                document.getElementById("mail1").style.borderColor = "";
+                document.getElementById("a3").innerHTML = "";
+                return true;
+            }
+        }
+        function p_alert() {
+            var a = document.forms["f"]["phone"].value;
+            if (a == "") {
+                document.getElementById("phone").style.borderColor = "red";
+                document.getElementById("phone1").style.borderColor = "red";
+                document.getElementById("a4").innerHTML = "<p style='color: red;'>Please Supply your phone number</p>"
+                return false;
+            } else {
+                document.getElementById("phone").style.borderColor = "";
+                document.getElementById("phone1").style.borderColor = "";
+                document.getElementById("a4").innerHTML = "";
+                return true;
+            }
+        }
+        function a_alert() {
+            var a = document.forms["f"]["address"].value;
+            if (a == "") {
+                document.getElementById("address").style.borderColor = "red";
+                document.getElementById("address1").style.borderColor = "red";
+                document.getElementById("a5").innerHTML = "<p style='color: red;'>Please Supply your address</p>"
+                return false;
+            } else {
+                document.getElementById("address").style.borderColor = "";
+                document.getElementById("address1").style.borderColor = "";
+                document.getElementById("a5").innerHTML = "";
+                return true;
+            }
+        }
+        function c_alert() {
+            var a = document.forms["f"]["city"].value;
+            document.getElementById("city").style.borderColor = "red";
+            if (a == "") {
+                document.getElementById("city1").style.borderColor = "red";
+                document.getElementById("a6").innerHTML = "<p style='color: red;'>Please Supply your city</p>"
+                return false;
+            } else {
+                document.getElementById("city").style.borderColor = "";
+                document.getElementById("city1").style.borderColor = "";
+                document.getElementById("a6").innerHTML = "";
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
