@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task3</title>
+</head>
+<body>
+    <br>
+    <label for="num1">1st number :</label>
+    <input type="text" id="num1"><br>
+    <label for="num2">2nd number:</label>
+    <input type="text" id="num2"><br>
+    <br>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button><br>
+    <p id="result"></p>
+    <script>
+        function multiply() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let resultElement = document.getElementById("result");
+
+            if (isNaN(num1) || isNaN(num2)) {
+                resultElement.textContent = "Invalid input. Please enter valid numbers.";
+            } else {
+                let multiplicationResult = num1 * num2;
+                resultElement.textContent = `Multiplication Result: ${multiplicationResult}`;
+            }
+        }
+        function divide() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let resultElement = document.getElementById("result");
+
+            if (isNaN(num1) || isNaN(num2)) {
+                resultElement.textContent = "Invalid input. Please enter valid numbers.";
+            } else if (num2 === 0) {
+                resultElement.textContent = "Division by zero is not allowed.";
+            } else {
+                let divisionResult = num1 / num2;
+                resultElement.textContent = `Division Result: ${divisionResult}`;
+            }
+        }
+    </script>
+</body>
+</html>

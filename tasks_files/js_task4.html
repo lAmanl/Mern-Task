@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task4</title>
+</head>
+<body>
+    <button onclick="showDate()">Show Date</button><br><br>
+    <p id="res1"></p>
+    <button onclick="showTime()">Show Time</button><br><br>
+    <p id="res2"></p>
+    <script>
+        function showDate() {
+            const now = new Date();
+            const date = now.toLocaleDateString();
+            const result = document.getElementById("res1");
+            result.textContent = `Current Date: ${date}`;
+        }
+        function showTime() {
+            const now = new Date();
+            const time = now.toString();
+            const result = document.getElementById("res2");
+            result.textContent = `Current Time: ${time}`;
+        }
+    </script>
+</body>
+</html>

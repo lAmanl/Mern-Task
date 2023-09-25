@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap Task6</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        #name,
+        #email,
+        #pass,
+        #Hobb {
+            font-size: large;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://www.google.com">
+        <div class="row p-3" style="border: 1px solid black; width: 500px; height: 500px; margin-left: 33%; margin-top: 125px; border-radius: 5%;">
+            <h2 id="name">Name</h2>
+            <div class="input-group">
+                <input class="form-control is-invalid" style="width: 250px; height: 30px; margin-left: 50px; margin-right: 14%;" type="text" required />
+                <div class="invalid-feedback" style="margin-left: 50px;">Name is required.</div>
+            </div>
+            <div>
+                <h2 id="email">Email</h2>
+                <div class="input-group">
+                    <input class="form-control is-invalid" style="width: 250px; height: 30px; margin-left: 50px; margin-right:13%;" type="email" required />
+                    <div class="invalid-feedback" style="margin-left: 50px;">Email is required.</div>
+                </div>
+            </div>
+            <div>
+                <h2 id="pass">Password</h2>
+                <div class="input-group">
+                    <input class="form-control is-invalid" style="width: 250px; height: 30px; margin-left: 50px; margin-right: 15%;" type="password" required />
+                    <div class="invalid-feedback" style="margin-left: 50px;">Password is required.</div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <h2 id="Hobb">Hobbies</h2>
+                <select style="width: 375px; height: 30px; margin-left: 50px; margin-right: 15%;" type="text">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+            </div>
+            <button class="btn btn-danger" style="width: 374px; height: 30px; margin-left: 50px;" type="submit">
+                <h6>Submit</h6>
+            </button>
+        </div>
+    </form>
+</body>
+
+</html>

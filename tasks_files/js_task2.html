@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task2</title>
+</head>
+<body>
+    <label for="in">Enter a string:</label>
+    <input type="text" id="in">
+    <button onclick="sort()">Sort</button>
+    <p id="result"></p>
+    
+    <script>
+        function sortString(inputString) {
+            let sortedString = inputString.split('').sort().join('');
+            return sortedString;
+        }
+        function sort() {
+            let inputString = document.getElementById("in").value;
+            let resultElement = document.getElementById("result");
+            let sortedString = sortString(inputString);
+            resultElement.textContent = `Sorted String: ${sortedString}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task7</title>
+    <style>
+        img{
+            position: absolute;
+            transition: transform 1ms linear;
+        }
+        div{
+            left: 200px;
+            position: relative;
+            height: 300px;
+            width: 1000px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <br><br><br><br><br>
+    <div id="cont">
+        <img id="train" src="../images/train.png"/>
+    </div><br>
+    <center>    
+        <button onclick="startAnimation();"/>Start</button>
+        <button onclick="stopAnimation();"/>Stop</button>
+    </center>
+
+    <script>
+        const container = document.getElementById('cont');
+            const image = document.getElementById('train');
+            let animationId;
+            let direction = 1;
+            let currentPosition = 0;
+            function moveImage() {
+                currentPosition += direction * 1;
+                if (currentPosition >= container.offsetWidth) {
+                    currentPosition = -train.width;
+                }
+                image.style.transform = `translateX(${currentPosition}px)`;
+                animationId = requestAnimationFrame(moveImage);
+            }
+            function startAnimation() {
+                if (!animationId) {
+                    moveImage();
+                }
+            }
+            function stopAnimation() {
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                    animationId = null;
+                }
+            }
+    </script>
+</body>
+</html>

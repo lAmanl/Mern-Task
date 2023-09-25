@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background: linear-gradient(to bottom, yellow, pink);
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    table {
+        padding: 20px;
+    }
+    p{
+        margin: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1 style="color:blue">Registeration Form</h1>
+        <form id="f">
+            <table style="border-collapse:collapse;">
+                <tr>
+                    <th>First Name</th>
+                    <td>
+                        <input id="fname" type="text" style="width: 310px; display: inline-block;">
+                        <p id="a1" style="display: inline-block; margin-left: 10px;"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td>
+                        <input id="lname" type="text" style="width: 310px; display: inline-block;">
+                        <p id="a2" style="display: inline-block; margin-left: 10px;"></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Email</th>
+                    <td>
+                        <input id="email" type="text" style="width: 310px; display: inline-block;">
+                        <p id="a3" style="display: inline-block; margin-left: 10px;"></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Password</th>
+                    <td>
+                        <input id="pass" type="password" style="width: 310px; display: inline-block;">
+                        <p id="a4" style="display: inline-block; margin-left: 10px;"></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Re-enter Password</th>
+                    <td>
+                        <input id="rpass" type="password" style="width: 310px; display: inline-block;">
+                        <p id="a5" style="display: inline-block; margin-left: 10px;"></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th rowspan="2">Gender</th>
+                    <td>
+                        <input type="radio" name="gender" />Male
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="radio" name="gender" style="margin-left: 100px;"/>Female
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Age</th>
+                    <td>
+                        <input id="age" type="number" style="width: 310px; display: inline-block;">
+                        <p id="a6" style="display: inline-block; margin-left: 10px;"></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Phone Number</th>
+                    <td>
+                        <input id="pno" type="number" style="width: 310px; display: inline-block;">
+                        <p id="a7" style="display: inline-block; margin-left: 10px;"></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Address</th>
+                    <td>
+                        <textarea id="address" cols="40" rows="5"></textarea>
+                        <p id="a9" style="display: inline-block; margin-left: 10px;"></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>State</th>
+                    <td>
+                        <input id="state" type="text" style="width: 310px; display: inline-block;">
+                        <p id="a8" style="display: inline-block; margin-left: 10px;"></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Country</th>
+                    <td>
+                        <select name="Country">
+                            <option value="choose your Country">choose your country</option>
+                            <option value="india">India</option>
+                            <option value="US">US</option>
+                            <option value="China">China</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Language known</th>
+                    <td>
+                        <input type="checkbox" />English
+                        <input type="checkbox" />Kannada
+                        <input type="checkbox" />Hindi
+                        <input type="checkbox" />Telugu
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" checked/>
+                        Hereby I declare all the given details are true
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2">
+                        <div align="right">Log in to <a href="https://ethnus.com/">Ethnus</a> website</div>
+                    </td>
+                </tr>
+                
+            </table>
+            <br>
+            <button type="button" onclick="a1_alert();a2_alert();a3_alert();a4_alert();a5_alert();a6_alert();a7_alert();a8_alert();a9_alert();all_alert()">Register</button>
+        </form>
+    </center>
+    <script>
+        function a1_alert(){
+            var a = document.forms["f"]["fname"].value;
+            if (a == "") {
+                document.getElementById("a1").innerHTML = "<p style='color: red;'>POOR</p>"
+                return false;
+            } else {
+                document.getElementById("a1").innerHTML = ""; 
+                return true;
+            }
+        }
+        function a2_alert(){
+            var a = document.forms["f"]["lname"].value;
+            if (a == "") {
+                document.getElementById("a2").innerHTML = "<p style='color: red;'>POOR</p>"
+                return false;
+            } else {
+                document.getElementById("a2").innerHTML = ""; 
+                return true;
+            }
+        }
+        function a3_alert(){
+            var a = document.forms["f"]["email"].value;
+            if (a == "") {
+                document.getElementById("a3").innerHTML = "<p style='color: red;'>POOR</p>"
+                return false;
+            } else {
+                document.getElementById("a3").innerHTML = ""; 
+                return true;
+            }
+        }
+        function a4_alert(){
+            var a = document.forms["f"]["pass"].value;
+            if (a == "") {
+                document.getElementById("a4").innerHTML = "<p style='color: red;'>POOR</p>"
+                return false;
+            } else {
+                document.getElementById("a4").innerHTML = "";
+                return true;
+            }
+        }
+        function a5_alert(){
+            var a = document.forms["f"]["rpass"].value;
+            if (a == "") {
+                document.getElementById("a5").innerHTML = "<p style='color: red;'>POOR OR MISMATCH</p>"
+                return false;
+            } else {
+                document.getElementById("a5").innerHTML = ""; 
+                return true;
+            }
+        }
+        function a6_alert(){
+            var a = document.forms["f"]["age"].value;
+            if (a == "") {
+                document.getElementById("a6").innerHTML = "<p style='color: red;'>POOR</p>"
+                return false;
+            } else {
+                document.getElementById("a6").innerHTML = ""; 
+                return true;
+            }
+        }
+        function a7_alert(){
+            var a = document.forms["f"]["pno"].value;
+            if (a == "") {
+                document.getElementById("a7").innerHTML = "<p style='color: red;'>POOR</p>"
+                return false;
+            } else {
+                document.getElementById("a7").innerHTML = ""; 
+                return true;
+            }
+        }
+        function a8_alert(){
+            var a = document.forms["f"]["state"].value;
+            if (a == "") {
+                document.getElementById("a8").innerHTML = "<p style='color: red;'>POOR</p>"
+                return false;
+            } else {
+                document.getElementById("a8").innerHTML = ""; 
+                return true;
+            }
+        }
+        function a9_alert(){
+            var a = document.forms["f"]["address"].value;
+            if (a == "") {
+                document.getElementById("a9").innerHTML = "<p style='color: red;'>POOR</p>"
+                return false;
+            } else {
+                document.getElementById("a9").innerHTML = "";
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
